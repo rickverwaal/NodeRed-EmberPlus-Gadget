@@ -57,4 +57,4 @@ Example flows can be found in the `examples` directory. Import them into Node-RE
 ---
 
 **Changelog:**  
-- v0.1.3: Add the msg.oid as input for the node
+- v0.1.5: Changed the Node registration so there are 2 nodes now instead of a duplicate.

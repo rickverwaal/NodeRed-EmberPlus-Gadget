@@ -11,7 +11,6 @@ module.exports = function(RED) {
         this.host = config.host;
         this.port = config.port;
     }
-    RED.nodes.registerType("emberplus-gadget-config", EmberPlusGadgetsConfigNode);
 
     // Main node
     function EmberPlusGadgetsNode(config) {
@@ -87,7 +86,4 @@ module.exports = function(RED) {
             await client.disconnectAsync();
         });
     }
-
-    // Register the node
-    RED.nodes.registerType("emberplus-gadget", EmberPlusGadgetsNode);
 } 
