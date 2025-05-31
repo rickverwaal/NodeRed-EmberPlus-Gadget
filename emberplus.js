@@ -44,8 +44,10 @@ module.exports = function(RED) {
         node.on('input', async function(msg) {
             try {
                 await client.connectAsync();
+                // Use msg.oid if provided, otherwise use configured OID
+                const oidToUse = msg.oid || this.oid;
                 // Walk the OID path step by step to avoid PathDiscoveryFailureError
-                const pathParts = this.oid.split('.');
+                const pathParts = oidToUse.split('.');
                 let currentPath = '';
                 let currentNode = null;
                 for (const part of pathParts) {
@@ -61,7 +63,7 @@ module.exports = function(RED) {
                 if (targetNode && targetNode.contents) {
                     const value = targetNode.contents.value;
                     const description = targetNode.contents.description;
-                    const oid = this.oid;
+                    const oid = oidToUse;
                     if (this.outputFormat === 'object') {
                         msg.payload = { oid, value, description };
                     } else if (this.outputFormat === 'value') {
