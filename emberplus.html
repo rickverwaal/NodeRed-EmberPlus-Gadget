@@ -1,6 +1,6 @@
 <script type="text/javascript">
     // Register the configuration node
-    RED.nodes.registerType('emberplus-gadgets-config', {
+    RED.nodes.registerType('emberplus-gadget-config', {
         category: 'config',
         defaults: {
             name: { value: "" },
@@ -13,12 +13,12 @@
     });
 
     // Register the main node
-    RED.nodes.registerType('emberplus-gadgets', {
+    RED.nodes.registerType('emberplus-gadget', {
         category: 'Ember+ Gadgets',
         color: '#a6bbcf',
         defaults: {
             name: { value: "" },
-            server: { value: "", type: "emberplus-gadgets-config", required: true },
+            server: { value: "", type: "emberplus-gadget-config", required: true },
             oid: { value: "" },
             outputFormat: { value: "array" }
         },
@@ -35,7 +35,7 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="emberplus-gadgets-config">
+<script type="text/x-red" data-template-name="emberplus-gadget-config">
     <div class="form-row">
         <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-config-input-name" placeholder="Name">
@@ -50,7 +50,7 @@
     </div>
 </script>
 
-<script type="text/x-red" data-template-name="emberplus-gadgets">
+<script type="text/x-red" data-template-name="emberplus-gadget">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -73,7 +73,7 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="emberplus-gadgets-config">
+<script type="text/x-red" data-help-name="emberplus-gadget-config">
     <p>Configuration node for Ember+ server connection.</p>
     <p>This node defines the connection settings for an Ember+ server that can be shared across multiple Ember+ Gadgets nodes.</p>
     <p>Configuration:</p>
@@ -84,7 +84,7 @@
     </ul>
 </script>
 
-<script type="text/x-red" data-help-name="emberplus-gadgets">
+<script type="text/x-red" data-help-name="emberplus-gadget">
     <p>A node that reads values from an Ember+ server using the node-emberplus library.</p>
     <p>Configuration:</p>
     <ul>

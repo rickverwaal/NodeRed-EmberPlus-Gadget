@@ -1,0 +1,18 @@
+[
+  {
+    "id": "example1",
+    "type": "emberplus-gadget-config",
+    "name": "Example Ember+ Server",
+    "host": "localhost",
+    "port": 9000
+  },
+  {
+    "id": "example2",
+    "type": "emberplus-gadget",
+    "name": "Read OID",
+    "server": "example1",
+    "oid": "997.1.2",
+    "outputFormat": "object",
+    "wires": [[]]
+  }
+] 

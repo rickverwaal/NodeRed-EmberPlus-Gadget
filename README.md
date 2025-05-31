@@ -1,4 +1,4 @@
-# node-red-contrib-emberplus-gadgets
+# node-red-contrib-emberplus-gadget
 
 A Node-RED node for communicating with devices using the Ember+ protocol.
 This node is currently only for reading values.
@@ -8,12 +8,12 @@ This node is currently only for reading values.
 Install from the Node-RED palette, or run:
 
 ```bash
-npm install node-red-contrib-emberplus-gadgets
+npm install node-red-contrib-emberplus-gadget
 ```
 
 ## Usage
 
-1. Add an **Ember+ Gadgets** node to your flow.
+1. Add an **Ember+ Gadget** node to your flow.
 2. Configure the node with:
    - **Host:** The hostname or IP address of your Ember+ server
    - **Port:** The port number (default: 9000)
@@ -49,6 +49,10 @@ MIT
 ## Contributing
 
 Pull requests and issues are welcome!
+
+## Examples
+
+Example flows can be found in the `examples` directory. Import them into Node-RED to get started quickly.
 
 ---
 
