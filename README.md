@@ -17,7 +17,7 @@ npm install node-red-contrib-emberplus-gadget
 2. Configure the node with:
    - **Host:** The hostname or IP address of your Ember+ server
    - **Port:** The port number (default: 9000)
-   - **OID:** The OID path you want to read (e.g., `997.1.2`)
+   - **OID:** The OID path you want to read (e.g., `997.1.2`) or use msg.iod 
    - **Output format:** Choose how the result is output:
      - `array` (default): `[OID, Value, Description]`
      - `object`: `{ oid, value, description }`
@@ -57,4 +57,4 @@ Example flows can be found in the `examples` directory. Import them into Node-RE
 ---
 
 **Changelog:**  
-- v0.1.0: Initial release, manual OID lookup
+- v0.1.3: Add the msg.oid as input for the node
